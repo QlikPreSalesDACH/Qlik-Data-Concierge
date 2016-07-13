@@ -1,0 +1,446 @@
+﻿///$tab 1_QUERYS
+SUB QUERYS_FULLLOAD
+	// identify Queries for metadata extraction
+	// identify all Querys within the entire SAP System
+	TRACE Status: Start extracting Queries;
+
+	[QUERYS]:
+	LOAD *		
+		,CAT_NAM&'/'&CUBE_NAM as %KEY
+		,CAT_NAM  as QUERY_CAT
+		,CUBE_NAM as QUERY_NAME
+		,CUBE_UID as QUERY_UID 
+		,DSCRPTN as DESCRIPTION_QUERY
+		,'QUERY' as FIELD_TYPE_QUERY
+		,'$(v_SYSID)' as SAP_SYSTEM		
+	;
+	SQL {
+	  "function":"/QTQVC/GET_BEXQUERIES",
+	  "output":"CUBES",
+	  "parameters":
+	  [
+	    { "direction":"in", "length":32, "name":"CAT_NAM", "optional":true, "type":"CHAR", "value":" " },
+	    { "direction":"tables", "name":"CUBES", "optional":false },
+	    { "direction":"tables", "name":"INFOPROVIDERS", "optional":false }
+	  ]
+	};
+		
+	// The field CUBE_TYPE is available with a customer patch based on Connector Version 6.1.2 and future Versions	
+	IF IsNull(FieldNumber('CUBE_TYPE','QUERYS')) THEN
+		TRACE Add CUBE_TYPE Coloumn;
+		tmpQUERYS:
+		NoConcatenate
+		LOAD *
+			,'ACTIVE' as CUBE_TYPE
+		Resident QUERYS;
+		
+		DROP Table QUERYS;
+		RENAME Table tmpQUERYS to QUERYS;
+	ELSE
+		tmpCUBE_TYPE:
+		LOAD CUBE_TYPE as CUBE_TYPE_GROUP
+		Resident QUERYS
+			Where CUBE_TYPE='ACTIVE';
+			
+		if NoOfRows('tmpCUBE_TYPE') = 0 then			
+			tmpQUERYS:
+			NoConcatenate
+			LOAD *
+				,'ACTIVE' as CUBE_TYPE_NEW
+			Resident QUERYS;
+			
+			DROP Table QUERYS;
+			RENAME Table tmpQUERYS to QUERYS;
+						
+			DROP Field CUBE_TYPE;
+			RENAME Field CUBE_TYPE_NEW to CUBE_TYPE;						
+		ENDIF	
+		
+		DROP Table tmpCUBE_TYPE;		
+	ENDIF
+	
+	// you can alter the generated TXT file manually to define the Querys for metadata extraction
+	STORE QUERYS into [$(v_QVDs)QUERYS_$(v_SYSID).txt] (txt);
+	STORE QUERYS into [$(v_QVDs)QUERYS_$(v_SYSID).qvd];
+	DROP Table QUERYS;				
+END SUB
+
+
+SUB QUERYS
+	SET v_CustomQueriesFound=0;
+	FOR Each v_File in FileList('$(v_QVDs)QUERYS_$(v_SYSID)_custom.txt')
+		SET v_CustomQueriesFound=1;
+	NEXT
+
+	if v_CustomQueriesFound=0 then
+		CALL QUERYS_FULLLOAD
+	ELSE
+		QUERYS:
+		LOAD * 
+		FROM [$(v_QVDs)QUERYS_$(v_SYSID)_custom.txt] (txt, utf8, embedded labels, delimiter is ',', msq);
+
+		STORE QUERYS into [$(v_QVDs)QUERYS_$(v_SYSID).qvd];
+		
+		DROP Table QUERYS;
+	ENDIF	
+ENDSUB
+///$tab 2_DIMENSIONS
+SUB DIMENSIONS	
+	// extract Dimensions for Queries within In-Memory Table QUERYS
+
+	[QUERYS]:
+	LOAD *
+	FROM [$(v_QVDs)QUERYS_$(v_SYSID).qvd] (qvd)
+		Where CUBE_TYPE = 'ACTIVE';
+	
+	// extract Dimensions/Characteristics for Queries within In-Memory Table QUERYS	
+	TRACE Status: Start extracting Dimensions;
+	
+	SET ErrorMode=0;
+	SET v_ScriptErrorCount= $(ScriptErrorCount);
+	LET v_countRows = NoOfRows('QUERYS')-1;
+	
+	FOR i = 0 to v_countRows
+
+		LET v_Infoprovider = Peek('QUERY_CAT',i,'QUERYS');
+		LET v_Query = Peek('QUERY_NAME',i,'QUERYS');
+		LET v_Key = Peek('%KEY',i,'QUERYS');		
+		LET v_Trace='LOAD Dimension '&(i+1)&' / '&(v_countRows+1)&' : $(v_Key)';
+		TRACE $(v_Trace);		
+		
+		[DIMENSIONS]:
+		LOAD '$(v_Key)' as %KEY
+			,'$(v_SYSID)' as SAP_SYSTEM		
+			,FIELDNAME as DIM_NAM
+			,[EDIT_MASK] as DIM_CAP
+			,[EDIT_MASK] as DESCRIPTION_DIMENSION
+			,'DIMENSION' as FIELD_TYPE_DIMENSION
+		;
+		SQL {
+		  "function":"/QTQVC/CALL_BEXQUERY",
+		  "output":"QUERY_DIMENSIONS",
+		  "parameters":
+		  [
+		    { "direction":"in", "length":1, "name":"FORMAT", "optional":true, "type":"CHAR", "value":"N" },
+		    { "direction":"in", "length":30, "name":"INFOPROVIDER", "optional":false, "type":"CHAR", "value":"$(v_Infoprovider)" },
+		    { "direction":"in", "length":1, "name":"MODE", "optional":false, "type":"CHAR", "value":"M" },
+		    { "direction":"in", "length":30, "name":"QUERY_NAME", "optional":false, "type":"CHAR", "value":"$(v_Query)" },
+		    { "direction":"in", "length":1, "name":"TOTALS", "optional":true, "type":"CHAR", "value":"N" },
+		    { "direction":"tables", "name":"FIELD_CATALOG", "optional":false },
+		    { "direction":"tables", "name":"QUERY_DIMENSIONS", "optional":false },
+		    { "direction":"tables", "name":"QUERY_MEASURES", "optional":false },
+		    { "direction":"tables", "name":"QUERY_VARIABLES", "optional":false }
+		  ]
+		};
+		
+		SET v_ScriptError = $(ScriptError);
+				
+		IF '$(v_ScriptErrorCount)' <>  '$(ScriptErrorCount)' then
+			SET v_ScriptErrorCount= $(ScriptErrorCount);
+			// force Reconnect after error to get the BAPI Connector working again
+			DISCONNECT;
+			
+			TRACE $(v_ScriptError);
+		ENDIF		
+		
+		ErrorTable:
+		LOAD '$(v_Key)' as %KEY			
+			,'$(v_ScriptError)' as ErrorCode	
+		AutoGenerate(1);		
+	NEXT
+	
+	// mark the queries with errors as NON ACTIVE -> ERROR FLAG
+	Join(QUERYS)
+	LOAD * Resident ErrorTable;		
+	DROP Table ErrorTable;
+	
+	tmpQUERYS:
+	LOAD *
+		,if(ErrorCode <> '' and CUBE_TYPE = 'ACTIVE'
+			,'ERROR: '&ErrorCode
+			,CUBE_TYPE) as CUBE_TYPE_NEW
+	Resident QUERYS;
+	
+	DROP Field CUBE_TYPE;
+	RENAME Field CUBE_TYPE_NEW to CUBE_TYPE;
+	
+	STORE tmpQUERYS into [$(v_QVDs)QUERYS_EXT_$(v_SYSID).qvd];	
+	DROP Table [tmpQUERYS];	
+				
+	STORE [DIMENSIONS] into [$(v_QVDs)DIMENSIONS_$(v_SYSID).qvd] (qvd);
+	DROP table [DIMENSIONS];
+		
+	DROP Table [QUERYS];
+END SUB
+///$tab 3_MEASURES
+SUB MEASURES
+	// extract Measures for Queries within In-Memory Table QUERYS
+
+	[QUERYS]:
+	LOAD *
+	FROM [$(v_QVDs)QUERYS_EXT_$(v_SYSID).qvd] (qvd)
+		Where CUBE_TYPE = 'ACTIVE';
+	
+	// extract Dimensions/Characteristics for Queries within In-Memory Table QUERYS	
+	TRACE Status: Start extracting Measures;
+	
+	SET ErrorMode=0;
+	SET v_ScriptErrorCount= $(ScriptErrorCount);
+	LET v_countRows = NoOfRows('QUERYS')-1;
+	
+	FOR i = 0 to v_countRows
+
+		LET v_Infoprovider = Peek('QUERY_CAT',i,'QUERYS');
+		LET v_Query = Peek('QUERY_NAME',i,'QUERYS');
+		LET v_Key = Peek('%KEY',i,'QUERYS');
+		LET v_Trace='LOAD Measures '&(i+1)&' / '&(v_countRows+1)&' : $(v_Key)';
+		TRACE $(v_Trace);		
+	
+		[MEASURES]:
+		LOAD '$(v_Key)' as %KEY
+			,'$(v_SYSID)' as SAP_SYSTEM			
+			,FIELDNAME as MES_NAM
+			,[EDIT_MASK] as MES_CAP
+			,[EDIT_MASK] as DESCRIPTION_MEASURE
+			,CFIELDNAME
+			,QFIELDNAME
+			,'MEASURE' as FIELD_TYPE_MEASURE
+		;
+		SQL {
+		  "function":"/QTQVC/CALL_BEXQUERY",
+		  "output":"QUERY_MEASURES",
+		  "parameters":
+		  [
+		    { "direction":"out", "length":10, "name":"TABLENAME", "optional":false, "type":"CHAR", "value":" " },
+		    { "direction":"in", "length":1, "name":"FORMAT", "optional":true, "type":"CHAR", "value":"N" },
+		    { "direction":"in", "length":30, "name":"INFOPROVIDER", "optional":false, "type":"CHAR", "value":"$(v_Infoprovider)" },
+		    { "direction":"in", "length":1, "name":"MODE", "optional":false, "type":"CHAR", "value":"M" },
+		    { "direction":"in", "length":30, "name":"QUERY_NAME", "optional":false, "type":"CHAR", "value":"$(v_Query)" },
+		    { "direction":"in", "length":1, "name":"TOTALS", "optional":true, "type":"CHAR", "value":"N" },
+		    { "direction":"in", "length":14, "name":"VARIANT", "optional":true, "type":"CHAR", "value":" " },
+		    { "direction":"in", "length":16, "name":"WINIPNR", "optional":true, "type":"CHAR", "value":" " },
+		    { "direction":"in", "length":50, "name":"WINUSER", "optional":true, "type":"CHAR", "value":" " },
+		    { "direction":"tables", "name":"FIELD_CATALOG", "optional":false },
+		    { "direction":"tables", "name":"QUERY_DIMENSIONS", "optional":false },
+		    { "direction":"tables", "name":"QUERY_MEASURES", "optional":false },
+		    { "direction":"tables", "name":"QUERY_VARIABLES", "optional":false }
+		  ]
+		};		
+	NEXT 
+	
+	STORE [MEASURES] into [$(v_QVDs)MEASURES_$(v_SYSID).qvd];
+	DROP table [MEASURES];
+	
+	DROP Table [QUERYS];
+END SUB
+///$tab 4_VARIABLES
+SUB VARIABLES
+	// extract Variables for Queries within In-Memory Table QUERYS
+
+	[QUERYS]:
+	LOAD *
+	FROM [$(v_QVDs)QUERYS_EXT_$(v_SYSID).qvd] (qvd)
+		Where CUBE_TYPE = 'ACTIVE';
+	
+	// extract Dimensions/Characteristics for Queries within In-Memory Table QUERYS	
+	TRACE Status: Start extracting Variables;
+	
+	SET ErrorMode=0;
+	SET v_ScriptErrorCount= $(ScriptErrorCount);
+	LET v_countRows = NoOfRows('QUERYS')-1;
+	
+	FOR i = 0 to v_countRows
+
+		LET v_Infoprovider = Peek('QUERY_CAT',i,'QUERYS');
+		LET v_Query = Peek('QUERY_NAME',i,'QUERYS');
+		LET v_Key = Peek('%KEY',i,'QUERYS');
+		LET v_Trace='LOAD Variables '&(i+1)&' / '&(v_countRows+1)&' : $(v_Key)';
+		TRACE $(v_Trace);		
+		
+		[tmpVARIABLES]:
+		LOAD *
+			,CUBE_NAM as %KEY
+			,CAT_NAM as VARIABLE_CAT 
+			,CUBE_NAM as VARIABLE_NAM
+			,TextBetween(DFLT_LOW,'[',']',2) as DFLT_LOW_VALUE
+			,TextBetween(DFLT_HIGH,'[',']',2) as DFLT_HIGH_VALUE
+			,'VARIABLE' as FIELD_TYPE_VARIABLE
+			,DSCRPTN as DESCRIPTION_VARIABLE
+			,'$(v_SYSID)' as SAP_SYSTEM				
+		;SQL {
+		  "function":"BAPI_MDPROVIDER_GET_VARIABLES",
+		  "output":"VARIABLES",
+		  "parameters":
+		  [
+		    { "direction":"out", "name":"RETURN", "optional":false },
+		    { "direction":"out", "name":"STATISTIC", "optional":false },
+		    { "direction":"in", "length":32, "name":"CAT_NAM", "optional":true, "type":"CHAR", "value":"$(v_Infoprovider)" },
+		    { "direction":"in", "length":70, "name":"CUBE_NAM", "optional":false, "type":"CHAR", "value":"$(v_Key)" },
+		    { "direction":"tables", "name":"VARIABLES", "optional":false }
+		  ]
+		};
+
+	NEXT
+	
+	DROP Field CUBE_NAM From tmpVARIABLES;
+	DROP Field CAT_NAM From tmpVARIABLES;
+	DROP Field DSCRPTN From tmpVARIABLES;
+
+	VARIABLES:
+	NoConcatenate
+	LOAD *		
+	Resident [tmpVARIABLES]
+		Where Left(%KEY,1)<>'$';
+
+	DROP Table tmpVARIABLES;
+
+	STORE VARIABLES into [$(v_QVDs)VARIABLES_$(v_SYSID).qvd] (qvd);	
+	DROP Table VARIABLES;
+	
+	DROP Table [QUERYS];
+END SUB
+///$tab 5_VARIABLENAMES
+SUB VARIABLENAMES	
+	// extract Variable Names for Queries within In-Memory Table QUERYS
+	
+	trace Start extracting Variable Names;
+	
+	VARIABLES:
+	LOAD VAR_UID
+	FROM [$(v_QVDs)VARIABLES_$(v_SYSID).qvd] (qvd);
+	
+	for Each v_Cube in FieldValueList('VAR_UID')
+			
+		VARNAMES:
+		LOAD COMPUID as VAR_UID
+			,COMPID as VAR_NAM_FINAL
+			,'$(v_SYSID)' as SAP_SYSTEM				
+		; SQL {
+		  "function":"/QTQVC/GET_VARNAMES",
+		  "output":"VARNAMES",
+		  "parameters":
+		  [
+		    {
+		      "direction":"tables", "name":"VARID", "optional":false,
+		      "table":
+		      [
+		        { "field":"CAT_NAM",       "length":32, "type":"CHAR", "values": [ "" ] },
+		        { "field":"CUBE_NAM",      "length":70, "type":"CHAR", "values": [ "" ] },
+		        { "field":"VAR_NAM",       "length":10, "type":"CHAR", "values": [ "" ] },
+		        { "field":"VAR_CAP",       "length":60, "type":"CHAR", "values": [ "" ] },
+		        { "field":"VAR_UID",       "length":25, "type":"CHAR", "values": [ "$(v_Cube)" ]},
+		        { "field":"VAR_ORDINAL",   "length":6,  "type":"NUM",  "values": [ "" ] },
+		        { "field":"VAR_TYPE",      "length":1,  "type":"NUM",  "values": [ "" ] },
+		        { "field":"DATA_TYPE",     "length":4,  "type":"CHAR", "values": [ "" ] },
+		        { "field":"CHR_MAX_LEN",   "length":3,  "type":"CHAR", "values": [ "" ] },
+		        { "field":"VAR_PROC_TYPE", "length":1,  "type":"NUM",  "values": [ "" ] },
+		        { "field":"VAR_SELC_TYPE", "length":1,  "type":"NUM",  "values": [ "" ] },
+		        { "field":"VAR_ENTRY_TYPE","length":1,  "type":"NUM",  "values": [ "" ] },
+		        { "field":"REF_DIM",       "length":32, "type":"CHAR", "values": [ "" ] },
+		        { "field":"REF_HRY",       "length":65, "type":"CHAR", "values": [ "" ] },
+		        { "field":"DFLT_LOW",      "length":143,"type":"CHAR", "values": [ "" ] },
+		        { "field":"DFLT_HIGH",     "length":143,"type":"CHAR", "values": [ "" ] },
+		        { "field":"DFLT_LOW_CAP",  "length":60, "type":"CHAR", "values": [ "" ] },
+		        { "field":"DFLT_HIGH_CAP", "length":60, "type":"CHAR", "values": [ "" ] },
+		        { "field":"DSCRPTN",       "length":60, "type":"CHAR", "values": [ "" ] }
+		      ]
+		    },
+		    { "direction":"tables", "name":"VARNAMES", "optional":false }
+		  ]
+		};
+		
+	NEXT
+	
+	STORE VARNAMES into [$(v_QVDs)VARNAMES_$(v_SYSID).qvd] (qvd);
+	DROP Table VARNAMES;
+	
+	DROP Table VARIABLES;
+END SUB
+///$tab 6_MEMBERS
+SUB MEMBERS
+	
+	// extract Variable Members for Queries within In-Memory Table QUERYS
+	set ErrorMode=0;
+	
+	trace Start extracting Variable Members;
+	
+	IF not (IsNum(v_VariableMemberLimit) and v_VariableMemberLimit > 10) then
+		SET v_VariableMemberLimit=1000;
+		TRACE Set v_VariableMemberLimit to default value: $(v_VariableMemberLimit);
+	ENDIF
+	
+	VARIABLES:
+	LOAD REF_DIM
+	FROM [$(v_QVDs)VARIABLES_$(v_SYSID).qvd] (qvd)
+		Where not Exists(REF_DIM);
+		
+	LET v_countRows = NoOfRows('VARIABLES')-1;	
+	LET i=0;
+	for Each v_REF_DIM in FieldValueList('REF_DIM')
+		LET v_InfoObject = replace(Replace('$(v_REF_DIM)','[',''),']','');			
+		LET v_Trace='LOAD Variables Member '&(i+1)&' / '&(v_countRows+1)&' : $(v_Key)';
+		LET i = i+1;
+		TRACE $(v_Trace);
+		
+		[VARIABLE_MEMBERS]:
+		LOAD '$(v_REF_DIM)' as REF_DIM
+			,'$(v_InfoObject)' as INFOOBJECT
+			,CHAVL_INT as MEM_NAM
+			,CHATEXT as DESCRIPTION_VARIABLEMEMBER
+			,'VARIABLE_MEMBER' as FIELDTYPE
+			,'$(v_SYSID)' as SAP_SYSTEM				
+		; SQL {
+		  "function":"RSZ_X_MEMBERS_GET",
+		  "output":"E_T_MEMBER_LIST",
+		  "parameters":
+		  [
+		    { "direction":"out", "length":1, "name":"E_MORE_MEMBERS_EXIST", "optional":false, "type":"CHAR", "value":" " },
+		    { "direction":"out", "length":4, "name":"E_SUBRC", "optional":false, "type":"INT", "value":" " },
+		    { "direction":"in", "length":30, "name":"I_INFOCUBE", "optional":true, "type":"CHAR", "value":"" },
+		    { "direction":"in", "length":30, "name":"I_IOBJNM", "optional":false, "type":"CHAR", "value":"$(v_InfoObject)" },
+		    { "direction":"in", "length":4, "name":"I_LIMIT", "optional":true, "type":"INT", "value":"$(v_VariableMemberLimit)" },
+		    { "direction":"in", "length":1, "name":"I_OBJVERS", "optional":true, "type":"CHAR", "value":"A" },
+		    { "direction":"tables", "name":"E_T_MEMBER_LIST", "optional":false }
+		  ]
+		};
+				
+		SET v_ScriptError = $(ScriptError);
+				
+		IF '$(v_ScriptErrorCount)' <>  '$(ScriptErrorCount)' then
+			SET v_ScriptErrorCount= $(ScriptErrorCount);
+			// force Reconnect after error to get the BAPI Connector working again
+			DISCONNECT;
+			
+			TRACE $(v_ScriptError);
+		ENDIF			
+	NEXT
+	
+	STORE VARIABLE_MEMBERS into [$(v_QVDs)VARIABLE_MEMBERS_$(v_SYSID).qvd];
+	DROP Table VARIABLE_MEMBERS;
+	
+	DROP Table VARIABLES;
+END SUB
+///$tab Call
+SUB LOADALL
+	FOR v_iLOADALL = 0 to NoOfRows('CONNECTIONS')-1;
+	
+		LET v_SYSID = Peek('SYSID',v_iLOADALL,'CONNECTIONS');
+		LET v_Connection  = Peek('Connection',v_iLOADALL,'CONNECTIONS');
+	
+		// RUN the Value of the Connection in the Table CONNECTIONS
+		$(v_Connection);
+			
+		CALL QUERYS;
+		
+		CALL DIMENSIONS;
+		
+		CALL MEASURES;
+		
+		CALL VARIABLES;
+		
+		CALL VARIABLENAMES;
+	
+		CALL MEMBERS;
+	
+	NEXT;
+ENDSUB	
