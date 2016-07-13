@@ -1,25 +1,5 @@
 # Qlik Data Qoncierge (QDC)
 
-Process-Overview of QDC:
-
-![Process-overview](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/PROCESS.JPG)
-
-
-----------
-Welcome to QDC:
-
-![Welcomescreen](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/INTRO.JPG)
-
-
-----------
-How the data-acquisition-wizard looks like:
-
-![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/MASHUP.JPG)
-
-
-----------
-
-
 ####**What is it?**
 
 A self-service solution for non-technical BEx users based on Qlik Sense, the Qlik SAP BEx Connector, a web wizard to select the BEx query and its parameters and the Sense API (on-demand app generation) to generate a new app filled with cached BEx data.
@@ -106,3 +86,27 @@ The documentation for Qlik Data Concierge will be maintained through the interna
  **I like to implement the solution in a production environment. Where do I get support from?**
  
  *Please contact Qlik Consulting Services to gain support in your project.*
+ 
+
+
+----------
+
+ 
+Process-Overview of QDC:
+
+![Process-overview](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/PROCESS.JPG)
+
+
+----------
+Welcome to QDC:
+
+![Welcomescreen](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/INTRO.JPG)
+
+
+----------
+How the data-acquisition-wizard looks like:
+
+![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/MASHUP.JPG)
+
+
+----------
