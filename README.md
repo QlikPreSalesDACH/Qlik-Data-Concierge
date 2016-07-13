@@ -73,7 +73,9 @@ After that this qvf file delivers all necessary metadata-information to the Fron
 The **second component** is a Webmashup. The Mashup enables the user to select the BEx Query containing the necessary filter-logic.
 
  - Web-based UI 
- - Ad-hoc App-Generation wizard
+ - Selection-logic wizard
+ - Self-Service Load-Script-Generation
+ - Ad-hoc App-Generation process
 
 ----------
 
