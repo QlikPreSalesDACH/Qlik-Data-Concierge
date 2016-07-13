@@ -91,7 +91,7 @@ The documentation for Qlik Data Concierge will be maintained through the interna
  
 Process-Overview of QDC:
 
-![Process-overview](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/PROCESS.JPG)
+![Process-overview](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Concierge/master/IMAGES/Process%20Overview.png)
 
 
 ----------
