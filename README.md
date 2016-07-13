@@ -1,7 +1,5 @@
 # Qlik Data Qoncierge (QDC)
 
-
-----------
 Process-Overview of QDC:
 
 ![Process-overview](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/PROCESS.JPG)
