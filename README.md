@@ -86,3 +86,23 @@ The documentation for Qlik Data Concierge will be maintained through the interna
 
 - [Go to documentation](https://github.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/wiki)
 
+
+----------
+
+
+
+####**Contribution**
+
+ **I like to build my own Data-Acquisition-Wizard based on a different data source e.g. Hadoop etc.**
+ 
+*You are welcome! We are highly interested to gain your contribution. Please contact Qlik PreSales Organization.*
+ 
+
+
+----------
+
+
+####**Support**
+ **I like to implement the solution in a production environment. Where do I get support from?**
+ 
+ *Please contact Qlik Consulting Services to gain support in your project.*
