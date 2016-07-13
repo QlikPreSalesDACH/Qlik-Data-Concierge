@@ -66,6 +66,7 @@ The QDC is a 2 component solution. The **first component** of the solution is a 
 
  - Define your SAP BW system(s)
  - Define a set of possible BEx Query's
+ - Delivers selection-dialogue-information to Frontend (Mashup)
 
 After that this qvf file delivers all necessary metadata-information to the Frontend within the green, white and grey logic from Qlik Solutions.
 
