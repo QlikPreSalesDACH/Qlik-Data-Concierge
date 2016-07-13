@@ -81,5 +81,5 @@ The **second component** is a Webmashup. The Mashup enables the user to select t
 
 The documentation for Qlik Data Concierge will be maintained through the internal WIKI section of this repository.
 
-- [Go to documentation](test)
+- [Go to documentation](https://github.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/wiki)
 
