@@ -1,4 +1,8 @@
-# Qlik Data Qoncierge (QDC)
+# Qlik Data Concierge (QDC)
+
+####**Qlik Data Concierge**
+
+ [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/sneakpeek.JPG)](https://www.youtube.com/watch?v=MsRgWh_7Xs4)
 
 ####**What is it?**
 
@@ -29,13 +33,6 @@ The first native Qlik Sense SAP connector wizard shipped by Qlik in Nov 2015 use
 
 To fulfill Enterprise IT demands for self-servcie live access to BEx queries for business users, the Qlik Data Concierge (QDC) has been developed.
 
-
-----------
-
-
-####**Where can I get a sneak peak?**
-
- - [Check out this cool video for a quick step-by-step walk-through on how to use the QDC.]()
 
 ----------
 
