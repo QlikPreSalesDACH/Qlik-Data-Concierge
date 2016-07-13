@@ -1,6 +1,6 @@
 # Qlik Data Concierge (QDC)
 
-####**Qlik Data Concierge**
+####**Qlik Data Concierge in action**
 
  [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/sneakpeek.JPG)](https://www.youtube.com/watch?v=MsRgWh_7Xs4)
 
