@@ -62,14 +62,14 @@ To fulfill Enterprise IT demands for self-servcie live access to BEx queries for
 
 ####**How does it work?**
 
-The QDC is a 2 component solution. The **first component** of the solution is a Qlik Sense document (.qvf) which helps you to collect the metadata of your necessary BEx Query's out of your SAP BW System.
+The QDC is a 2 component solution. The **first component** of the solution is a Qlik Sense document (.qvf) which helps you to collect the metadata of your necessary BEx Query's out of your SAP BW System(s).
 
  - Define your SAP BW system(s)
  - Define a set of possible BEx Query's
 
-After that this qvf file delivers all necessary metadata to the Frontend within the green, white and grey logic from Qlik Solutions.
+After that this qvf file delivers all necessary metadata-information to the Frontend within the green, white and grey logic from Qlik Solutions.
 
-The **second component** is a Webmashup. The Mashup enables the user to select the BEx Query containing the necessary filter-logic .
+The **second component** is a Webmashup. The Mashup enables the user to select the BEx Query containing the necessary filter-logic.
 
  - Web-based UI 
  - Ad-hoc App-Generation wizard
