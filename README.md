@@ -6,8 +6,14 @@
 
 ####**What is it?**
 
-A self-service solution for non-technical BEx users based on Qlik Sense, the Qlik SAP BEx Connector, a web wizard to select the BEx query and its parameters and the Sense API (on-demand app generation) to generate a new app filled with cached BEx data.
+An advanced self-service solution for non-technical users. It widens the standard Qlik Sense self-service use cases by reusing data source specific structures and metadata. Additionally it provides modern mashup-based wizards for the business users with Sense API usage plus enhanced scripting in the background.
+This QDC framework is highly customizable and can be used to provide true data self-service solutions in combination with any fast Big Data or non-Big Data source as long as there is a driver or a connector available for the specific data source.
 
+It is shipped with 4 predefined use cases:
+  - SAP BW Query Wizard - for SAP BW Query power users
+  - SAP HANA Wizard - for SAP HANA power users. It also creates Direct Discovery based load scripts
+  - SAP BW Live Dashboard Wizard - for any kind of business user (based on an nice Dashboard template and the ODAG extension)
+  - SAP HANA Live Dashboard - ODAG + Direct Discovery on a 100 million records fact table
 
 ----------
 
