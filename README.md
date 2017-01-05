@@ -53,7 +53,7 @@ The QDC is a 2 component solution. The **first component** of the solution is a 
  - Define your SAP BW system(s)
  - Define a set of possible BEx Query's
  - Delivers selection-dialogue-information to Frontend (Mashup)
- - 
+ 
 **Example for SAP HANA Views:**
  - Define your SAP HANA system(s)
  - Load metadata from HANA system and define available content (views, tables etc.)
