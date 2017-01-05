@@ -1,4 +1,5 @@
-# Qlik Data Concierge (QDC)
+# Qlik Data Concierge (QDC) 
+Version: 2.0.1
 
 ####**Qlik Data Concierge in action**
 
