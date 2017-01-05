@@ -8,7 +8,7 @@ Version: 2.0.1
 > - added usecase selection entry
 > - added SAP HANA Wizard for tables and views (Direct Discovery option available)
 > - added 2 OnDemand scenarios
-> - fixing issues for SAP BEx Wizard
+> - fixed issues for SAP BEx Wizard
 
 ####**Qlik Data Concierge in action**
 
