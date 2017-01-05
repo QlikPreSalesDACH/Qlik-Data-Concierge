@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "path": "qdc-bex.html",
+      "color": "color1",
+      "icon": "fa-magic",
+      "picture": "img/BEx.png",
+      "headline": "SAP BEx Queries",
+      "launch": "Start Data Concierge",
+      "description": "<p>OnDemand data acquisition</p><p>for SAP BW Queries.</p>"
+    },
+    {
+      "path": "qdc-hana.html",
+      "color": "color1",
+      "icon": "fa-magic",
+      "picture": "img/Oracle Hyperion.png",
+      "headline": "SAP HANA",
+      "launch": "Start Data Concierge",
+      "description": "<p>OnDemand data acquisition</p><p>for SAP HANA.</p>"
+    },
+    {
+      "path": "qdc-odi.html",
+      "color": "color2",
+      "icon": "fa-cart-arrow-down",
+      "picture": "img/OnDemand BW Dashboard.png",
+      "headline": "Live SAP BW Dashboard",
+      "launch": "Jump to Dashboard",
+      "description": "<p>Live Visual Analytics Dashboard</p><p>for SAP BW.</p>"
+    },
+    {
+      "path": "qdc-odi-hana.html",
+      "color": "color2",
+      "icon": "fa-cart-arrow-down",
+      "picture": "img/OnDemand HANA Dashboard.png",
+      "headline": "Live SAP HANA Dashboard",
+      "launch": "Jump to Dashboard",
+      "description": "<p>Live HANA Analytics Dashboard</p><p>for SAP HANA.</p>"
+    },
+    {
+      "path": "",
+      "color": "color3",
+      "icon": "fa-star",
+      "picture": "img/QlikLogo-RGB.jpg",
+      "headline": "Your Usecase here",
+      "launch": "Start your usecase",
+      "description": "<p>insert additional Usecases here</p>"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+	"config":{
+		"general":{
+			"folder":"DataConciergev2",
+			"connect":"http://<hostname>/sense/app/"
+		},
+		"bex":{
+			"appid":"2a0e0e81-b785-432c-88fe-6864d6062479",
+			"namespace":"Query_"
+		},
+		"hana":{
+			"appid":"a93c765d-c20c-45be-8183-41e53d71ecdd",
+			"namespace":"HANA_"
+		},
+		"bex_odi":{
+			"appid":"cb1eb394-37af-4f9f-9765-b9b6fe7350a5"
+		},
+		"hana_odi":{
+			"appid":"a53cd120-5961-4f8c-a326-c6679c251895"
+		}
+	}
+}

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+ <QvdTableHeader>
+   <QvBuildNo>50504</QvBuildNo>
+   <CreatorDoc>425cd667-09cc-478c-8bb6-b00241a78192</CreatorDoc>
+   <CreateUtcTime>2017-01-03 11:52:45</CreateUtcTime>
+   <SourceCreateUtcTime></SourceCreateUtcTime>
+   <SourceFileUtcTime></SourceFileUtcTime>
+   <SourceFileSize>-1</SourceFileSize>
+   <StaleUtcTime></StaleUtcTime>
+   <TableName>QUERYS</TableName>
+   <Fields>
+     <QvdFieldHeader>
+       <FieldName>CAT_NAM</FieldName>
+       <BitOffset>64</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>39</NoOfSymbols>
+       <Offset>0</Offset>
+       <Length>420</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>CUBE_NAM</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>420</Offset>
+       <Length>1494</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>CUBE_TYPE</FieldName>
+       <BitOffset>8</BitOffset>
+       <BitWidth>1</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>2</NoOfSymbols>
+       <Offset>1914</Offset>
+       <Length>18</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>CUBE_UID</FieldName>
+       <BitOffset>12</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>1932</Offset>
+       <Length>2322</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>CREATED_ON</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>4254</Offset>
+       <Length>2</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>LST_SCHEMA_UPD</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>4256</Offset>
+       <Length>2</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SCHEMA_UPD_BY</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>4258</Offset>
+       <Length>2</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>LST_DATA_UPD</FieldName>
+       <BitOffset>19</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>4260</Offset>
+       <Length>2064</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>DATA_UPD_BY</FieldName>
+       <BitOffset>9</BitOffset>
+       <BitWidth>3</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>6</NoOfSymbols>
+       <Offset>6324</Offset>
+       <Length>34</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>DSCRPTN</FieldName>
+       <BitOffset>26</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>80</NoOfSymbols>
+       <Offset>6358</Offset>
+       <Length>1600</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>%KEY</FieldName>
+       <BitOffset>33</BitOffset>
+       <BitWidth>7</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>7958</Offset>
+       <Length>2321</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>QUERY_CAT</FieldName>
+       <BitOffset>72</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>39</NoOfSymbols>
+       <Offset>10279</Offset>
+       <Length>420</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>QUERY_NAME</FieldName>
+       <BitOffset>40</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>10699</Offset>
+       <Length>1494</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>QUERY_UID</FieldName>
+       <BitOffset>48</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>86</NoOfSymbols>
+       <Offset>12193</Offset>
+       <Length>2322</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>DESCRIPTION_QUERY</FieldName>
+       <BitOffset>56</BitOffset>
+       <BitWidth>8</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>80</NoOfSymbols>
+       <Offset>14515</Offset>
+       <Length>1600</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>FIELD_TYPE_QUERY</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>16115</Offset>
+       <Length>7</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+     <QvdFieldHeader>
+       <FieldName>SAP_SYSTEM</FieldName>
+       <BitOffset>0</BitOffset>
+       <BitWidth>0</BitWidth>
+       <Bias>0</Bias>
+       <NumberFormat>
+         <Type>UNKNOWN</Type>
+         <nDec>0</nDec>
+         <UseThou>0</UseThou>
+         <Fmt></Fmt>
+         <Dec></Dec>
+         <Thou></Thou>
+       </NumberFormat>
+       <NoOfSymbols>1</NoOfSymbols>
+       <Offset>16122</Offset>
+       <Length>5</Length>
+       <Comment></Comment>
+       <Tags></Tags>
+     </QvdFieldHeader>
+   </Fields>
+   <Compression></Compression>
+   <RecordByteSize>10</RecordByteSize>
+   <NoOfRecords>86</NoOfRecords>
+   <Offset>16127</Offset>
+   <Length>860</Length>
+   <Lineage>
+     <LineageInfo>
+       <Discriminator>INLINE;</Discriminator>
+       <Statement></Statement>
+     </LineageInfo>
+     <LineageInfo>
+       <Discriminator>Provider=QvSAPBAPIConnector.dll;</Discriminator>
+       <Statement>SQL {
+	  &quot;function&quot;:&quot;/QTQVC/GET_BEXQUERIES&quot;,
+	  &quot;output&quot;:&quot;CUBES&quot;,
+	  &quot;parameters&quot;:
+	  [
+	    { &quot;direction&quot;:&quot;in&quot;, &quot;length&quot;:32, &quot;name&quot;:&quot;CAT_NAM&quot;, &quot;optional&quot;:true, &quot;type&quot;:&quot;CHAR&quot;, &quot;value&quot;:&quot; &quot; },
+	    { &quot;direction&quot;:&quot;tables&quot;, &quot;name&quot;:&quot;CUBES&quot;, &quot;optional&quot;:false },
+	    { &quot;direction&quot;:&quot;tables&quot;, &quot;name&quot;:&quot;INFOPROVIDERS&quot;, &quot;optional&quot;:false }
+	  ]
+	}</Statement>
+     </LineageInfo>
+     <LineageInfo>
+       <Discriminator>Provider=QvSAPBAPIConnector.dll;</Discriminator>
+       <Statement>[QUERYS]:
+	LOAD *		
+		,CAT_NAM&amp;'/'&amp;CUBE_NAM as %KEY
+		,CAT_NAM  as QUERY_CAT
+		,CUBE_NAM as QUERY_NAME
+		,CUBE_UID as QUERY_UID 
+		,DSCRPTN as DESCRIPTION_QUERY
+		,'QUERY' as FIELD_TYPE_QUERY
+		,'B7Q' as SAP_SYSTEM		
+	;SQL {
+	  &quot;function&quot;:&quot;/QTQVC/GET_BEXQUERIES&quot;,
+	  &quot;output&quot;:&quot;CUBES&quot;,
+	  &quot;parameters&quot;:
+	  [
+	    { &quot;direction&quot;:&quot;in&quot;, &quot;length&quot;:32, &quot;name&quot;:&quot;CAT_NAM&quot;, &quot;optional&quot;:true, &quot;type&quot;:&quot;CHAR&quot;, &quot;value&quot;:&quot; &quot; },
+	    { &quot;direction&quot;:&quot;tables&quot;, &quot;name&quot;:&quot;CUBES&quot;, &quot;optional&quot;:false },
+	    { &quot;direction&quot;:&quot;tables&quot;, &quot;name&quot;:&quot;INFOPROVIDERS&quot;, &quot;optional&quot;:false }
+	  ]
+	}</Statement>
+     </LineageInfo>
+     <LineageInfo>
+       <Discriminator>RESIDENT QUERYS;</Discriminator>
+       <Statement></Statement>
+     </LineageInfo>
+     <LineageInfo>
+       <Discriminator>STORE - [lib://QDC\qvds\QUERYS_B7Q.qvd];</Discriminator>
+       <Statement></Statement>
+     </LineageInfo>
+     <LineageInfo>
+       <Discriminator>STORE - [lib://QDC\qvds\QUERYS_B7Q.txt] (txt);</Discriminator>
+       <Statement></Statement>
+     </LineageInfo>
+   </Lineage>
+   <Comment></Comment>
+ </QvdTableHeader>
+ 0SD_C03 0FIAR_C03 ZBILLIT1 0PA_MP01 0PCA_C01 0MAT_PLANT ZTD_CUBE2 0PUR_C01 0PUR_C04 ZCOPA_C01 0COSTCENTER ZPCA_C01 0FIAP_C03 0D_NW_M01 DELETE_C1 DELETE_C2 ZECPCAC4 ZFIGL_C02 0COPC_C04 ZMMPUR_MP ZMMIC_MP ZCOPC_C05 0FIGL_C10 ZEQUI_C01 ZPCA_MP1 0WORKCENTER 0FIGL_C01 0FIGL_C02 ZCOCA_C1 0COOM_C02 0FIAA_C01 ZCOPAO01 ZFIGL_C2 0FIAR_C05 0FIAA_C04 0FIAA_C02 0D_FC_C01 0D_FC_C03 0D_NW_C01 REP_20160226120821 REP_20160412131425 REP_20160418112700 REP_201604181540 REP_20160721104557 REP_20160823141457 REP_20160907100152 MAHTEST1 REP_20160920085133 REP_20160920101843 REP_20160920105704 MAHTEST2 MAHTEST3 REP_20161006125800 0COSTCENTER_Q001 MAHTEST4 ARQ_20161219_0FIAR_C03 MAH_0FIAR_C03 REP_20161219105801 MRV_0FIAP_C03_TEST1 DJA_0FIAR_C03 REP_20161219105754 QDC_NWDEMO_PLANACTUALS REP_20161222104710 PCA_C01_TEST1 0PCA_C01_TEST2 PCA_C01_TEST2 PCA_C01_TEST10 PCA_C01_TEST11 0PUR_C01_Q0001 DELETE_C1_TEST1 DELETE_C2_TEST1 MAHSD20160119 REP_20160119100252 REP_20160216082554 REP_20160226120820 REP_20160226134936 ZQ_PRFTCTR_001 ZFI_GL_C01 Z0COPC_C04_01 Z0COPC_C04_001 ZMMPUR_MP_001 ZMMIC_MP_Q0001 ZMMIC_CO5_Q0001 Z0SD_C03_001 Z0FIGL_ERP ZQ_EQUIPM_01 ZPCA_MP1_Q001 ZTEST_0WORKCENTER ZTEST_GLHIER ZTEST_GLHIER2 ZTEST_PRCTRHIER ZPCA_MP1_Q0002 ZPCA_MP1_Q0003 ZQ_FIAP_03_001 REP_20120828073709 ZFIAP_C03_001 ZQ_CO_PA_001 ZPRFT_TRFIG_Q001 ZCO_OM_Q001 ZCO_OM_Q002_BW35 ZQ_FIAA_ANNUAL_VALUE REP_20121213141026 ZFI_GL_LI_01 ZECPCA_LINEITEM_01 QZFIGL_C2_001 0FIAR_C05_Q0001 0FIAA_C04_Q002 0FIAA_C02_Q1001 0D_FC_AE_CONDITION_Q0010 0D_FC_AE_VAR_Q02 0D_FC_AE_VAR_Q01 0D_FC_AE_VAR_Q03 0D_FC_AE_VAR_Q04 0D_FC_NW_M01_Q0002 0D_FC_NW_C01_Q0001 0D_FC_NW_C01_Q0002 0D_FC_NW_C01_Q0003 0D_FC_NW_C01_Q0004 0D_FC_NW_C01_Q0005 0D_FC_NW_C01_Q0006 0D_FC_NW_M01_Q0001 0FIAA_C01_Q001 0PCA_C01_Q0012 0PCA_C01_Q0017 0FIAA_C04_Q001 ACTIVE INACTIVE 00O2TK6X1ANP3UWIW2KQH38D1 00O2TK6X1ANP6SXX7MKCRXC0L 00O2TK6X1ANP6TJ306KUXEZV9 00O2TK6X1ANP6TJF8W5GAZJ85 00O2TK6X1ANP73IJFGR0ONCB9 00O2TK6X1ANP777OYO2PGAGID 00O2TK6X1ANP78TY1T5SVA1P1 00O2TK6X1ANP78UDRE3216QS5 00O2TK6X1ANP7A2QB5CXL08WL 00O2TK6X1ANP7A2UG38W5E1W5 00O2TK6X1ANP7A2W8HHTVD0D1 00O2TK6X1ANP7BO2FGJS74179 00O2TK6X1ANP7BPCZ4PNMWOID 00O2TK6X1ANP7BRLHL0K1NZTH 00O2TK6X1ANP7C2VM3FJKXHCL 00O2TK6X1ANP7C9BRBC67W651 00O2TK6X1ANP7JUI9TU0E6Z9X 00O2TK6X1ANP7JUI9V4Z6W2DX 00O2TK6X1ANP7JUIADKYWN5ZP 00O2TK6X1ANP7JUIAQW1370NP 00O2TK6X1ANP7JUIBSFHX44R9 00O2TK6X1ANP7JUIBPQMN2EQD 00O2TK6X1ANP7JWM08G99LK45 00O2TK6X1ANP7KA5IY2OZW5CL 00O2TK6X1ANQT90MCAXJM7316 00O2TK6X1ANQT90PS1A9Y2RDM 00O2TK6X1ANQT9DXVHXV7TQ8Q 00O2TK6X1ANQTL07MBMTZ2IRA 00O2TK6X1ANQTL0C53RERO86U 00O2TK6X1ANQTQHBPOOQJWP6E 00O2TK6X1ANQTTOSHLSQ8JXX2 00O2TK6X1ANQTTOUISDX7GDBQ 00O2TK6X1ANQTX1LWEBRD28VQ 00O2TK6X1ANQTX1Q1BCLRSWHI 00O2TK6X1ANQU06X3GY6QHNCM 00O2TK6X1ANQU1AADC0CUPQWM 00O2TK6X1ANQU1AF9ERTSE8HI 00O2TK7SRQO5SAQ4K9SKMK7KS 00O2TK7SRQO5VS2VMA7A4L818 00O2TK7SRQO5VTR9G0LE03Y7G 00O2TK7SRQO5Z6PBLRSGHMSAI 00O2TK7SRQO5Z6PDJ5MY9DTX6 00O2TK7SRQO5Z6PJNNGY8N54Q 00O2TK7SRQO5Z6PKF7TLR08FU 00O2TK7SRQO5ZN1FR97WR93IZ 00O2TK7SRQO5ZOS19XX8JZH97 00O2TK7SRQO5ZRHUM8QKID0D7 00O2TK7SRQO632DX6AC2E23PK 00O2TK7SRQO637PMN22G74THK 00O2TK7SRQO6386PONXNQCQ4O 00O2TK7SRQO6386PZQEGZ2QFC 00O2TK7SRQO6386UWII9QP26G 00O2TK7SRQO63AWRYLTSZQ9FS 00O2TK7SRQO63AWT4PW2R0G94 00O2TK7SRQO7IL047OX3IIKSN 00O2TK7SRQO7IL04ANXJK5807 00O2TK7SRQO7IL050AS1L3LC7 00O2TK7SRQO7ILIHLJMXMLUR6 00O2TK7SRQO7IM1JZXLYE77QQ 00O2TK7SRQO7IM3HNV2HN523Y 00O2TK7SRQO7IM3L5Q61EORU6 00O2TK7SRQO7LKY6RUJ5DG6B2 00O2TK7SRQO7LTMRT71YI97CE 00O2TK7SRQO7LYQ2RCDNWHXPR 00O2TK7SRQO7LZ1KLFSR9TASV 00O2TK7SRQO7PN0NXQK5ALG8V 268Y6LW2QPSQXOXU9ENB68GAD 2RUIC2UGQKP9MYY5KZTI2VXCV 35295GR80X5RJIC6UGEZ8QKW9 487Q3LGJF4ATI8CF83UUALB9Z 48G3L2AJNN8QN0TE27T5AIN73 48HA9XQ2N78BCPVW67P6Z317Z 48I09ZI6J0MKF992WNLEHNBPB 48I0BEABVS59K9TXHF2KYMU4F 49C2WBKQ8FFD6PJV0NSDPNKDS 49CKC7APDQFRYJT204GPR1U8N 49CLMK24P8OFHF39OR2E3SWGN 49CLO16RUKTXBBM21P9BNE0RB 49CLPZTA6QFJKKFNP4S83G7RR 49CLQL5EUUQFB6GJWNAC0WNDJ 49CLRS9190JLTNL8NCF8FXG0N 49CMGWHK60L0HESWS9JCJSG6O 441HSV78XHUNM6PXQ7LGSQWTB 5R4DL656P87LTYW4D189JKWHF 6KF8D4L1NC4XXFEF5MSLXXIG9 DCD2X1TSBUAFF3BNRSXNCDODB     ^&…ıU≤B20160405120606  ä!4ˆU≤B20160412131722  5◊Ø˚U≤B20160504125237  ÕV≤B20161013094349  =ØûV≤B20160721104701  /ÈgV≤B20160902064431  o’¥V≤B20160907105647  HïÿV≤B20161010111816  i‰zV≤B20160920085609  ≈∆{V≤B20160920143557  l3{V≤B20160920105836  fÒ}V≤B20161004171622  ˇãV≤B20161005092625  ¥”õV≤B20161006130100  §™V≤B20161007064228  AŸV≤B20161010144833  ù•M&V≤B20161219110301  t±M&V≤B20161219113332  ±M&V≤B20161219113243  ÓÿM&V≤B20161219123438  Ω∞M&V≤B20161219113149  ¶M&V≤B20161219110412  ”‘l&V≤B20161221154003  ºr{&V≤B20161222111932  ®~ı≠S≤B20150610132648  ¥Öı≠S≤B20150610134452  ¬"ÆS≤B20150612075202  ∫∆¯¿S≤B20150929114810  ó˘¿S≤B20150929133207  {õKÃS≤B20151119092603  Ïí2“S≤B20151218115308  -∏2“S≤B20151218124845  :›uÍU≤B20160215113018  ;’º‰U≤B20160119100731  &…ıU≤B20160405120537  °◊ÎU≤B20160226121633  |Ùê˚U≤B20160502101116  §õÓæL≤B20120830122916  SûˆU≤B20160419091214  QûˆU≤B20160419090718  „E$O≤B20130816083427  πM$O≤B20130816085433  “≠$O≤B20130816110034  Ìµ$O≤B20130816112109  »;Y<Q≤B20140114131912  )a\=Q≤B20140131115305  Ô˛ˆBQ≤B20140225134319  z˘É_Q≤B20140704135546  zKåfQ≤B20140822121338  ∏¶πfQ≤B20140825093816  dSûˆU≤B20160419091300  ˛SûˆU≤B20160419091454  r"xQ≤B20141117145458  lc~Q≤B20141217112940  #\œæL≤B20120828075043  YœæL≤B20120828074243  xsœæL≤B20120828081016  ¬∫*√L≤B20120901171906  '*v√L≤B20120906115623  kgÖ√L≤B20120907114347  ÜçÖ√L≤B20120907124102  (âƒL≤B20120924134440  ;√’L≤B20121213141819  ØTûˆU≤B20160419091631  kRûˆU≤B20160419091051  ]TûˆU≤B20160419091549  ØûﬂæL≤B20120829140655  Ä5âƒL≤B20120924140928  ÓâƒL≤B20120924134638  ¯]&V≤B20161220124152  œ]&V≤B20161220124111  é]&V≤B20161220124046  ”]&V≤B20161220124115  ˙]&V≤B20161220124154  ]&V≤B20161220123912  À]&V≤B20161220123851  “]&V≤B20161220123858  ˝]&V≤B20161220123901  ]&V≤B20161220123905  ]&V≤B20161220123909  	]&V≤B20161220123913  º]&V≤B20161220123836  F¬√L≤B20120911092550  5v√L≤B20120906112309  ∞v√L≤B20120906111152  4âƒL≤B20120924140558 QVCUSER ICD AOI BPO BSP SAP SD_complete_structure MAH_SAPTRAINING SD_completeV2 ZLIS_SalesV2 REP_20160721104557 REP_20160823141457 REP_20160907100152 MAHTEST1 ICD_My Order Report ICD_Purchasing Analysis ICD_Purchasing Groups MAHTEST2 MAHTEST3 COPA - Profit Analysis MAH 0COSTCENTER_Q001 Test Variable MAHTEST4 ARQ_20161219_0FIAR_C03 MAH_0FIAR_C03 MHR_0FIAR_C03 MRV_0FIAP_C03_Test1 DJA_0FIAR_C03 MVL_0FIAR_C03 QDC_NWDEMO_PLANACTUALS REP_20161222104710 PCA_C01_TEST1 Financial Key Figures: Overview PCA_C01_TEST2 PCA_C01_TEST10 PCA_C01_TEST11 0PUR_C01_Q0001 DELETE_C1_TEST1 DELETE_C2_TEST1 MAH-SD REP_20160119100252 FIAPC03_Structure SD_complete ZLIS_Sales Profit Center Accounts FI_GL_C01 Inventory Valuation Purchace Data and Group MP Inventory Material Price Inventory Material Price 0SD_C03 General Ledger Accounting (New) Equipment List zpca_mp1_q001 ZTEST_0WORKCENTER ZTEST_GLHIER ZTEST_GLHIER2 ZTEST_PRCTRHIER ZPCA_MP1_Q0002 Hier test query ZPCA_MP1_Q0003 Hier test query REF FIAP_03 FI_AP_03 FI AP 03 CO-PA 800 IDEA Profit Center Trans Figures Cost Overhead Cost Overhead CO-OM Annual Values Test_COPA_01 GL Accounts FI C01 PCA Line Items General Ledger Line Items Customers: Payment History Depreciation grid Cost Centers: Depreciations Current Situation Description not found 0D_FC_NW_M01_Q0002 0D_FC_NW_C01_Q0001 0D_FC_NW_C01_Q0002 0D_FC_NW_C01_Q0003 0D_FC_NW_C01_Q0004 0D_FC_NW_C01_Q0005 0D_FC_NW_C01_Q0006 0D_FC_NW_M01_Q0001 Asset List Profit Center: Plan/actual/variance - balance sheet accounts Acquisition and production costs - grid 0SD_C03/REP_20160226120821 0FIAR_C03/REP_20160412131425 0SD_C03/REP_20160418112700 ZBILLIT1/REP_201604181540 0PA_MP01/REP_20160721104557 0PCA_C01/REP_20160823141457 0MAT_PLANT/REP_20160907100152 0PCA_C01/MAHTEST1 ZTD_CUBE2/REP_20160920085133 0PUR_C01/REP_20160920101843 0PUR_C04/REP_20160920105704 0PCA_C01/MAHTEST2 0PCA_C01/MAHTEST3 ZCOPA_C01/REP_20161006125800 0COSTCENTER/0COSTCENTER_Q001 ZPCA_C01/MAHTEST4 0FIAR_C03/ARQ_20161219_0FIAR_C03 0FIAR_C03/MAH_0FIAR_C03 0FIAR_C03/REP_20161219105801 0FIAP_C03/MRV_0FIAP_C03_TEST1 0FIAR_C03/DJA_0FIAR_C03 0FIAR_C03/REP_20161219105754 0D_NW_M01/QDC_NWDEMO_PLANACTUALS 0D_NW_M01/REP_20161222104710 0PCA_C01/PCA_C01_TEST1 0PCA_C01/0PCA_C01_TEST2 0PCA_C01/PCA_C01_TEST2 0PCA_C01/PCA_C01_TEST10 0PCA_C01/PCA_C01_TEST11 0PUR_C01/0PUR_C01_Q0001 DELETE_C1/DELETE_C1_TEST1 DELETE_C2/DELETE_C2_TEST1 0SD_C03/MAHSD20160119 0FIAP_C03/REP_20160119100252 0FIAP_C03/REP_20160216082554 0SD_C03/REP_20160226120820 ZBILLIT1/REP_20160226134936 ZECPCAC4/ZQ_PRFTCTR_001 ZFIGL_C02/ZFI_GL_C01 0COPC_C04/Z0COPC_C04_01 0COPC_C04/Z0COPC_C04_001 ZMMPUR_MP/ZMMPUR_MP_001 ZMMIC_MP/ZMMIC_MP_Q0001 ZCOPC_C05/ZMMIC_CO5_Q0001 0SD_C03/Z0SD_C03_001 0FIGL_C10/Z0FIGL_ERP ZEQUI_C01/ZQ_EQUIPM_01 ZPCA_MP1/ZPCA_MP1_Q001 0WORKCENTER/ZTEST_0WORKCENTER 0FIGL_C01/ZTEST_GLHIER 0FIGL_C02/ZTEST_GLHIER2 ZFIGL_C02/ZTEST_PRCTRHIER ZPCA_MP1/ZPCA_MP1_Q0002 ZPCA_MP1/ZPCA_MP1_Q0003 0FIAP_C03/ZQ_FIAP_03_001 0FIAP_C03/REP_20120828073709 0FIAP_C03/ZFIAP_C03_001 ZCOPA_C01/ZQ_CO_PA_001 0PCA_C01/ZPRFT_TRFIG_Q001 ZCOCA_C1/ZCO_OM_Q001 0COOM_C02/ZCO_OM_Q002_BW35 0FIAA_C01/ZQ_FIAA_ANNUAL_VALUE ZCOPAO01/REP_20121213141026 ZFIGL_C02/ZFI_GL_LI_01 0PCA_C01/ZECPCA_LINEITEM_01 ZFIGL_C2/QZFIGL_C2_001 0FIAR_C05/0FIAR_C05_Q0001 0FIAA_C04/0FIAA_C04_Q002 0FIAA_C02/0FIAA_C02_Q1001 0D_FC_C01/0D_FC_AE_CONDITION_Q0010 0D_FC_C03/0D_FC_AE_VAR_Q02 0D_FC_C03/0D_FC_AE_VAR_Q01 0D_FC_C03/0D_FC_AE_VAR_Q03 0D_FC_C01/0D_FC_AE_VAR_Q04 0D_NW_M01/0D_FC_NW_M01_Q0002 0D_NW_C01/0D_FC_NW_C01_Q0001 0D_NW_C01/0D_FC_NW_C01_Q0002 0D_NW_C01/0D_FC_NW_C01_Q0003 0D_NW_C01/0D_FC_NW_C01_Q0004 0D_NW_C01/0D_FC_NW_C01_Q0005 0D_NW_C01/0D_FC_NW_C01_Q0006 0D_NW_M01/0D_FC_NW_M01_Q0001 0FIAA_C01/0FIAA_C01_Q001 0PCA_C01/0PCA_C01_Q0012 0PCA_C01/0PCA_C01_Q0017 0FIAA_C04/0FIAA_C04_Q001 0SD_C03 0FIAR_C03 ZBILLIT1 0PA_MP01 0PCA_C01 0MAT_PLANT ZTD_CUBE2 0PUR_C01 0PUR_C04 ZCOPA_C01 0COSTCENTER ZPCA_C01 0FIAP_C03 0D_NW_M01 DELETE_C1 DELETE_C2 ZECPCAC4 ZFIGL_C02 0COPC_C04 ZMMPUR_MP ZMMIC_MP ZCOPC_C05 0FIGL_C10 ZEQUI_C01 ZPCA_MP1 0WORKCENTER 0FIGL_C01 0FIGL_C02 ZCOCA_C1 0COOM_C02 0FIAA_C01 ZCOPAO01 ZFIGL_C2 0FIAR_C05 0FIAA_C04 0FIAA_C02 0D_FC_C01 0D_FC_C03 0D_NW_C01 REP_20160226120821 REP_20160412131425 REP_20160418112700 REP_201604181540 REP_20160721104557 REP_20160823141457 REP_20160907100152 MAHTEST1 REP_20160920085133 REP_20160920101843 REP_20160920105704 MAHTEST2 MAHTEST3 REP_20161006125800 0COSTCENTER_Q001 MAHTEST4 ARQ_20161219_0FIAR_C03 MAH_0FIAR_C03 REP_20161219105801 MRV_0FIAP_C03_TEST1 DJA_0FIAR_C03 REP_20161219105754 QDC_NWDEMO_PLANACTUALS REP_20161222104710 PCA_C01_TEST1 0PCA_C01_TEST2 PCA_C01_TEST2 PCA_C01_TEST10 PCA_C01_TEST11 0PUR_C01_Q0001 DELETE_C1_TEST1 DELETE_C2_TEST1 MAHSD20160119 REP_20160119100252 REP_20160216082554 REP_20160226120820 REP_20160226134936 ZQ_PRFTCTR_001 ZFI_GL_C01 Z0COPC_C04_01 Z0COPC_C04_001 ZMMPUR_MP_001 ZMMIC_MP_Q0001 ZMMIC_CO5_Q0001 Z0SD_C03_001 Z0FIGL_ERP ZQ_EQUIPM_01 ZPCA_MP1_Q001 ZTEST_0WORKCENTER ZTEST_GLHIER ZTEST_GLHIER2 ZTEST_PRCTRHIER ZPCA_MP1_Q0002 ZPCA_MP1_Q0003 ZQ_FIAP_03_001 REP_20120828073709 ZFIAP_C03_001 ZQ_CO_PA_001 ZPRFT_TRFIG_Q001 ZCO_OM_Q001 ZCO_OM_Q002_BW35 ZQ_FIAA_ANNUAL_VALUE REP_20121213141026 ZFI_GL_LI_01 ZECPCA_LINEITEM_01 QZFIGL_C2_001 0FIAR_C05_Q0001 0FIAA_C04_Q002 0FIAA_C02_Q1001 0D_FC_AE_CONDITION_Q0010 0D_FC_AE_VAR_Q02 0D_FC_AE_VAR_Q01 0D_FC_AE_VAR_Q03 0D_FC_AE_VAR_Q04 0D_FC_NW_M01_Q0002 0D_FC_NW_C01_Q0001 0D_FC_NW_C01_Q0002 0D_FC_NW_C01_Q0003 0D_FC_NW_C01_Q0004 0D_FC_NW_C01_Q0005 0D_FC_NW_C01_Q0006 0D_FC_NW_M01_Q0001 0FIAA_C01_Q001 0PCA_C01_Q0012 0PCA_C01_Q0017 0FIAA_C04_Q001 00O2TK6X1ANP3UWIW2KQH38D1 00O2TK6X1ANP6SXX7MKCRXC0L 00O2TK6X1ANP6TJ306KUXEZV9 00O2TK6X1ANP6TJF8W5GAZJ85 00O2TK6X1ANP73IJFGR0ONCB9 00O2TK6X1ANP777OYO2PGAGID 00O2TK6X1ANP78TY1T5SVA1P1 00O2TK6X1ANP78UDRE3216QS5 00O2TK6X1ANP7A2QB5CXL08WL 00O2TK6X1ANP7A2UG38W5E1W5 00O2TK6X1ANP7A2W8HHTVD0D1 00O2TK6X1ANP7BO2FGJS74179 00O2TK6X1ANP7BPCZ4PNMWOID 00O2TK6X1ANP7BRLHL0K1NZTH 00O2TK6X1ANP7C2VM3FJKXHCL 00O2TK6X1ANP7C9BRBC67W651 00O2TK6X1ANP7JUI9TU0E6Z9X 00O2TK6X1ANP7JUI9V4Z6W2DX 00O2TK6X1ANP7JUIADKYWN5ZP 00O2TK6X1ANP7JUIAQW1370NP 00O2TK6X1ANP7JUIBSFHX44R9 00O2TK6X1ANP7JUIBPQMN2EQD 00O2TK6X1ANP7JWM08G99LK45 00O2TK6X1ANP7KA5IY2OZW5CL 00O2TK6X1ANQT90MCAXJM7316 00O2TK6X1ANQT90PS1A9Y2RDM 00O2TK6X1ANQT9DXVHXV7TQ8Q 00O2TK6X1ANQTL07MBMTZ2IRA 00O2TK6X1ANQTL0C53RERO86U 00O2TK6X1ANQTQHBPOOQJWP6E 00O2TK6X1ANQTTOSHLSQ8JXX2 00O2TK6X1ANQTTOUISDX7GDBQ 00O2TK6X1ANQTX1LWEBRD28VQ 00O2TK6X1ANQTX1Q1BCLRSWHI 00O2TK6X1ANQU06X3GY6QHNCM 00O2TK6X1ANQU1AADC0CUPQWM 00O2TK6X1ANQU1AF9ERTSE8HI 00O2TK7SRQO5SAQ4K9SKMK7KS 00O2TK7SRQO5VS2VMA7A4L818 00O2TK7SRQO5VTR9G0LE03Y7G 00O2TK7SRQO5Z6PBLRSGHMSAI 00O2TK7SRQO5Z6PDJ5MY9DTX6 00O2TK7SRQO5Z6PJNNGY8N54Q 00O2TK7SRQO5Z6PKF7TLR08FU 00O2TK7SRQO5ZN1FR97WR93IZ 00O2TK7SRQO5ZOS19XX8JZH97 00O2TK7SRQO5ZRHUM8QKID0D7 00O2TK7SRQO632DX6AC2E23PK 00O2TK7SRQO637PMN22G74THK 00O2TK7SRQO6386PONXNQCQ4O 00O2TK7SRQO6386PZQEGZ2QFC 00O2TK7SRQO6386UWII9QP26G 00O2TK7SRQO63AWRYLTSZQ9FS 00O2TK7SRQO63AWT4PW2R0G94 00O2TK7SRQO7IL047OX3IIKSN 00O2TK7SRQO7IL04ANXJK5807 00O2TK7SRQO7IL050AS1L3LC7 00O2TK7SRQO7ILIHLJMXMLUR6 00O2TK7SRQO7IM1JZXLYE77QQ 00O2TK7SRQO7IM3HNV2HN523Y 00O2TK7SRQO7IM3L5Q61EORU6 00O2TK7SRQO7LKY6RUJ5DG6B2 00O2TK7SRQO7LTMRT71YI97CE 00O2TK7SRQO7LYQ2RCDNWHXPR 00O2TK7SRQO7LZ1KLFSR9TASV 00O2TK7SRQO7PN0NXQK5ALG8V 268Y6LW2QPSQXOXU9ENB68GAD 2RUIC2UGQKP9MYY5KZTI2VXCV 35295GR80X5RJIC6UGEZ8QKW9 487Q3LGJF4ATI8CF83UUALB9Z 48G3L2AJNN8QN0TE27T5AIN73 48HA9XQ2N78BCPVW67P6Z317Z 48I09ZI6J0MKF992WNLEHNBPB 48I0BEABVS59K9TXHF2KYMU4F 49C2WBKQ8FFD6PJV0NSDPNKDS 49CKC7APDQFRYJT204GPR1U8N 49CLMK24P8OFHF39OR2E3SWGN 49CLO16RUKTXBBM21P9BNE0RB 49CLPZTA6QFJKKFNP4S83G7RR 49CLQL5EUUQFB6GJWNAC0WNDJ 49CLRS9190JLTNL8NCF8FXG0N 49CMGWHK60L0HESWS9JCJSG6O 441HSV78XHUNM6PXQ7LGSQWTB 5R4DL656P87LTYW4D189JKWHF 6KF8D4L1NC4XXFEF5MSLXXIG9 DCD2X1TSBUAFF3BNRSXNCDODB SD_complete_structure MAH_SAPTRAINING SD_completeV2 ZLIS_SalesV2 REP_20160721104557 REP_20160823141457 REP_20160907100152 MAHTEST1 ICD_My Order Report ICD_Purchasing Analysis ICD_Purchasing Groups MAHTEST2 MAHTEST3 COPA - Profit Analysis MAH 0COSTCENTER_Q001 Test Variable MAHTEST4 ARQ_20161219_0FIAR_C03 MAH_0FIAR_C03 MHR_0FIAR_C03 MRV_0FIAP_C03_Test1 DJA_0FIAR_C03 MVL_0FIAR_C03 QDC_NWDEMO_PLANACTUALS REP_20161222104710 PCA_C01_TEST1 Financial Key Figures: Overview PCA_C01_TEST2 PCA_C01_TEST10 PCA_C01_TEST11 0PUR_C01_Q0001 DELETE_C1_TEST1 DELETE_C2_TEST1 MAH-SD REP_20160119100252 FIAPC03_Structure SD_complete ZLIS_Sales Profit Center Accounts FI_GL_C01 Inventory Valuation Purchace Data and Group MP Inventory Material Price Inventory Material Price 0SD_C03 General Ledger Accounting (New) Equipment List zpca_mp1_q001 ZTEST_0WORKCENTER ZTEST_GLHIER ZTEST_GLHIER2 ZTEST_PRCTRHIER ZPCA_MP1_Q0002 Hier test query ZPCA_MP1_Q0003 Hier test query REF FIAP_03 FI_AP_03 FI AP 03 CO-PA 800 IDEA Profit Center Trans Figures Cost Overhead Cost Overhead CO-OM Annual Values Test_COPA_01 GL Accounts FI C01 PCA Line Items General Ledger Line Items Customers: Payment History Depreciation grid Cost Centers: Depreciations Current Situation Description not found 0D_FC_NW_M01_Q0002 0D_FC_NW_C01_Q0001 0D_FC_NW_C01_Q0002 0D_FC_NW_C01_Q0003 0D_FC_NW_C01_Q0004 0D_FC_NW_C01_Q0005 0D_FC_NW_C01_Q0006 0D_FC_NW_M01_Q0001 Asset List Profit Center: Plan/actual/variance - balance sheet accounts Acquisition and production costs - grid QUERY B7Q              0@ P(
+`0p8Ç@ 	íH$			
+¢P(
+
+
+±X,¿`0–h4		Âp8
+
+x< Å@ âD" ëH$0ôL&@°P(P©T*`±X,qπ\.Ñ¡`0î…d2§—h4¥Ÿl6ƒ·p8‘Èt:‰Òx<Ù˘|>  Å@     !
+ÖB!!!" âD"""#0çF###  $@"ëH$$$%V*ïJ%%%&`2ôL&&&'p:ùN'''(ÜBùP((')ñJ°R))(*¶R•T**)+∂Z©V++*,∆b≠X,,+  -÷j±Z--,.Êrµ\..-/¯zπ^//.0ÉΩ`00/1ã¡b1102 ì≈d22130õ…f3324D£Õh4435T´—j5546f≥’l6657vªŸn7768Ü√›p8879ñÀ·r998		:¶”Ât::9;∂€Èv;;:<∆„Ìx<<;=÷ÎÒz==<>ÊÛı|>>=?˚˘~??>@ ˛Ä@@?AÉAA@  B*ÖBBA!!C6
+áCCB""DJ$âDDC##E[,ãEED$$Fk4çFFD%%G{<èGGD%%HãDëHHD%%IõLìIID$$J´TïJJEKª\óKKF&&LÀdôLLG&&M€l"õMMH&&NÎt&ùNNI&&O˚|*üOOJ&&PÖ.°PPK&&Qç2£QQLR*ï6•RRMS6ù:ßSSNTJ•f®TTUZ≠>´UUO""
