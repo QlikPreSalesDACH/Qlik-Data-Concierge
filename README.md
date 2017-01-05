@@ -2,14 +2,15 @@
 
 ####**Qlik Data Concierge in action**
 
- [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/sneakpeek.JPG)](https://www.youtube.com/watch?v=MsRgWh_7Xs4)
+ [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/index.jpg)](https://www.youtube.com/watch?v=MsRgWh_7Xs4)
 
 ####**What is it?**
 
 An advanced self-service solution for non-technical users. It widens the standard Qlik Sense self-service use cases by reusing data source specific structures and metadata. Additionally it provides modern mashup-based wizards for the business users with Sense API usage plus enhanced scripting in the background.
-This QDC framework is highly customizable and can be used to provide true data self-service solutions in combination with any fast Big Data or non-Big Data source as long as there is a driver or a connector available for the specific data source.
+This QDC framework is **highly customizable** and can be used to provide **true data self-service solutions in combination with any fast Big Data or non-Big Data source** as long as there is a driver or a connector available for the specific data source.
 
 It is shipped with 4 predefined use cases:
+
   - SAP BW Query Wizard - for SAP BW Query power users
   - SAP HANA Wizard - for SAP HANA power users. It also creates Direct Discovery based load scripts
   - SAP BW Live Dashboard Wizard - for any kind of business user (based on an nice Dashboard template and the ODAG extension)
@@ -20,7 +21,7 @@ It is shipped with 4 predefined use cases:
 
 ####**What it is not?**
 
-It is not a built-in function of Qlik Sense. It is rather an example solution, a self-service app providing access to SAP BEx queries, and perhaps, in the future, to other SAP structures, Big Data systems or high-performance databases. It will most likely need customizations or adaptations to run on a productive customer environment. We work closely with Qlik Consulting Services to offer this as a Solution Services package - the customize outcome of which could be supported by Qlik Services according to individual agreements with the customer. Please see also below, section “Implementation”.
+It is not a built-in function of Qlik Sense. It is rather an example solution, a self-service app providing access to **SAP BEx queries**, to **other SAP structures**, **Big Data systems** or **high-performance databases**. It will most likely need customizations or adaptations to run on a productive customer environment. We work closely with Qlik Consulting Services to offer this as a Solution Services package - the customize outcome of which could be supported by Qlik Services according to individual agreements with the customer. Please see also below, section “Implementation”.
 
 
 ----------
@@ -28,11 +29,7 @@ It is not a built-in function of Qlik Sense. It is rather an example solution, a
 
 ####**What's the motivation?**
 
-We see SAP BW on HANA as the preferred, long-term IT strategy in most of the large enterprise accounts in Germany, Switzerland and many other sales regions. BEx queries are designed by SAP for self-service data consumption by the business user as they generally provide rather small, aggregated data sets based on the user's individual selection of dimension, measures and variables. 
-
-As the old SAP BEx Analyzer Excel plugin is phased out, newer, more modern, web based ad-hoc visualization and reporting tools will fill the gap with their promises of rich & advanced analytical features combined with direct (live) connection to BEx queries. With the shift towards BW systems boosted by HANA, this notion of "live" consumption of BEx queries by the self-service user becomes a key requirement for any new (strategic) BI project in the enterprise.
-
-The Qlik Data Concierge (QDC) has been developed to fulfill Enterprise IT demands, providing self-service live access to SAP BEx queries for business users.
+The Qlik Data Concierge (QDC) has been developed to fulfill Enterprise IT demands, providing self-service live access to **SAP structures**, **Big Data systems**, **high-performance databases** and other **operative data sources** for business users.
 
 
 ----------
@@ -98,13 +95,22 @@ Process-Overview of QDC:
 ----------
 Welcome to QDC:
 
-![Welcomescreen](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/INTRO.JPG)
+![Welcomescreen](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/index.jpg)
 
 
 ----------
-How the data-acquisition-wizard looks like:
+QDC BEx Wizard:
 
-![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/MASHUP.JPG)
+![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/Bex%20Wizard.png)
 
 
 ----------
+QDC HANA Wizard:
+
+![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/HANA%20Wizard.png)
+
+----------
+QDC Live Dashboard:
+
+![Mashupe](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/Live%20Dashboard.png)
+
