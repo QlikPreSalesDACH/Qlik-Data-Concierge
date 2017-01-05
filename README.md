@@ -38,15 +38,21 @@ The Qlik Data Concierge (QDC) has been developed to fulfill Enterprise IT demand
 
 ####**How does it work?**
 
-The QDC is a 2 component solution. The **first component** of the solution is a Qlik Sense document (.qvf) which helps you to collect the metadata of your necessary BEx Query's out of your SAP BW System(s).
+The QDC is a 2 component solution. The **first component** of the solution is a Qlik Sense document (.qvf) which helps you to collect the metadata of your necessary system(s) (SAP, Hadoop  etc.).
 
+**Example for SAP BEx Queries:**
  - Define your SAP BW system(s)
  - Define a set of possible BEx Query's
+ - Delivers selection-dialogue-information to Frontend (Mashup)
+ - 
+**Example for SAP HANA Views:**
+ - Define your SAP HANA system(s)
+ - Load metadata from HANA system and define available content (views, tables etc.)
  - Delivers selection-dialogue-information to Frontend (Mashup)
 
 After that this qvf file delivers all necessary metadata-information to the Frontend within the green, white and grey logic from Qlik Solutions.
 
-The **second component** is a Webmashup. The Mashup enables the user to select the BEx Query containing the necessary filter-logic.
+The **second component** is a Webmashup. The Mashup enables the user to select the Query containing the necessary filter-logic.
 
  - Web-based UI 
  - Selection-logic wizard
