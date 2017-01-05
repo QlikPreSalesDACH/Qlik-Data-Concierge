@@ -12,7 +12,8 @@ Version: 2.0.1
 
 ####**Qlik Data Concierge in action**
 
- [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/index.jpg)](https://www.youtube.com/watch?v=MsRgWh_7Xs4)
+
+ [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/index.jpg)](https://qliktechnologies365-my.sharepoint.com/personal/dja_qlik_com/_layouts/15/guestaccess.aspx?guestaccesstoken=gy9i0amIAPHTrzU0qxI4yFmn0F09JA%2fV2uQDNE%2bHwRI%3d&docid=0102c7b9120464128bde6a4dfa79783f8&rev=1)
 
 ####**What is it?**
 
