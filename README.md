@@ -12,7 +12,7 @@ Version: 2.0.1
 
 ####**Qlik Data Concierge in action**
 
- [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/22.png)](https://vimeo.com/198218451)
+ [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/26.png)](https://youtu.be/tHVaG6COrn0)
 
 ####**What is it?**
 
