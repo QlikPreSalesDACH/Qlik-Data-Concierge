@@ -1,0 +1,101 @@
+﻿///$tab 1_Metadata
+SUB METADATA
+
+
+QUERYS:
+LOAD *
+FROM
+[$(v_QVDs)QUERYS_EXT*.qvd]
+(qvd);
+
+DIMENSIONS:
+LOAD *
+FROM
+[$(v_QVDs)DIMENSIONS*.qvd]
+(qvd);
+
+MEASURES:
+LOAD *
+FROM
+[$(v_QVDs)MEASURES*.qvd]
+(qvd);
+
+VARIABLES:
+LOAD 
+%KEY, 
+VARIABLE_CAT, 
+VARIABLE_NAM, 
+VAR_NAM, 
+//VAR_NAM_FINAL,
+VAR_CAP, 
+VAR_UID, 
+VAR_ORDINAL, 
+VAR_TYPE, 
+//DATA_TYPE, 
+CHR_MAX_LEN, 
+VAR_PROC_TYPE, 
+VAR_SELC_TYPE, 
+VAR_ENTRY_TYPE, 
+REF_DIM, 
+REF_HRY, 
+DFLT_LOW as DFLT_LOW_VALUE,
+DFLT_HIGH as DFLT_HIGH_VALUE, 
+trim(subfield(subfield(DFLT_LOW,'].[',2),']',1)) as DEFAULT_LOW, 
+trim(subfield(subfield(DFLT_HIGH,'].[',2),']',1)) as DEFAULT_HIGH,
+DFLT_LOW_CAP, 
+DFLT_HIGH_CAP, 
+DESCRIPTION_VARIABLE,
+FIELD_TYPE_VARIABLE
+FROM
+[$(v_QVDs)VARIABLES*.qvd]
+(qvd);
+
+left join
+LOAD VAR_UID, 
+     VAR_NAM_FINAL
+ //    SAP_SYSTEM
+FROM
+[$(v_QVDs)VARNAMES*.qvd]
+(qvd);
+
+VARIABLE_MEMBERS:
+LOAD REF_DIM, 
+     INFOOBJECT, 
+     MEM_NAM, 
+     DESCRIPTION_VARIABLEMEMBER as MEM_CAP, 
+     FIELDTYPE
+FROM
+[$(v_QVDs)VARIABLE_MEMBERS*.qvd]
+(qvd)
+;
+
+
+VAR_TYPE:
+LOAD * INLINE [
+    VAR_TYPE, VAR_TYPE_TEXT
+    1, Member
+    2, Numeric
+    3, Hierarchy
+];
+
+VAR_SELC_TYPE:
+LOAD * INLINE [
+VAR_SELC_TYPE, VAR_SELC_TYPE_TEXT
+	1, single Value
+	2, Intervall
+	3, no Interval
+	4, multiple Values
+];
+
+VAR_ENTRY_TYPE:
+LOAD * INLINE [
+VAR_ENTRY_TYPE, VAR_ENTRY_TYPE_TEXT
+	0, optional
+	1, mandatory (without default Value)
+	2, mandatory
+];
+
+
+			
+END SUB
+

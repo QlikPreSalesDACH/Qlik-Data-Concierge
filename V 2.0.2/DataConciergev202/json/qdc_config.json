@@ -1,0 +1,38 @@
+{
+	"config":{
+		"general":{
+			"folder":"DataConciergev202",
+			"connect":"https://<hostname>/sense/app/"
+		},
+		
+		
+		"bex":{ 
+			"app_name": "QDC - Qlik Data Concierge V1.3.qvf",
+			"scenario": "QDC BEx Wizard",
+			"appid":"2a0e0e81-b785-432c-88fe-6864d6062479",
+			"namespace":"Query_"
+		},
+		
+		
+		"hana":{
+			"app_name": "QDC - SAP HANA V1.1.qvf",
+			"scenario": "QDC HANA Wizard",		
+			"appid":"a93c765d-c20c-45be-8183-41e53d71ecdd",
+			"namespace":"HANA_"
+		},
+		
+		
+		"bex_odi":{
+			"app_name": "QDC Actuals and Plan Selection App.qvf",
+			"scenario": "BEx OnDemand Scenario",		
+			"appid":"cb1eb394-37af-4f9f-9765-b9b6fe7350a5"
+		},
+		
+		
+		"hana_odi":{
+			"app_name": "QDC SAP HANA Live Access Selection.qvf",
+			"scenario": "HANA OnDemand Scenario",			
+			"appid":"a53cd120-5961-4f8c-a326-c6679c251895"
+		}
+	}
+}
