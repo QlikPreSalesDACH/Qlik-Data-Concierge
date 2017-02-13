@@ -1,4 +1,11 @@
 # Qlik Data Concierge (QDC) 
+Version: 2.0.2
+
+> **Changes:** 
+> 
+> - QDC is now working with Qlik Sense 3.2
+> - some bugfixes
+
 Version: 2.0.1 
 
 > **Changes:** 
