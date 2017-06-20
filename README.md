@@ -17,11 +17,11 @@ Version: 2.0.1
 > - added 2 OnDemand scenarios
 > - fixed issues for SAP BEx Wizard
 
-####**Qlik Data Concierge in action**
+#### **Qlik Data Concierge in action**
 
  [![Qlik Data Concierge in action](https://raw.githubusercontent.com/QlikPreSalesDACH/Qlik-Data-Qoncierge/master/IMAGES/26.png)](https://youtu.be/tHVaG6COrn0)
 
-####**What is it?**
+#### **What is it?**
 
 An advanced self-service solution for non-technical users. It widens the standard Qlik Sense self-service use cases by reusing data source specific structures and metadata. Additionally it provides modern mashup-based wizards for the business users with Sense API usage plus enhanced scripting in the background.
 This QDC framework is **highly customizable** and can be used to provide **true data self-service solutions in combination with any fast Big Data or non-Big Data source** as long as there is a driver or a connector available for the specific data source.
@@ -36,7 +36,7 @@ It is shipped with 4 predefined use cases:
 ----------
 
 
-####**What it is not?**
+#### **What it is not?**
 
 It is not a built-in function of Qlik Sense. It is rather an example solution, a self-service app providing access to **SAP BEx queries**, to **other SAP structures**, **Big Data systems** or **high-performance databases**. It will most likely need customizations or adaptations to run on a productive customer environment. We work closely with Qlik Consulting Services to offer this as a Solution Services package - the customize outcome of which could be supported by Qlik Services according to individual agreements with the customer. Please see also below, section “Implementation”.
 
@@ -44,7 +44,7 @@ It is not a built-in function of Qlik Sense. It is rather an example solution, a
 ----------
 
 
-####**What's the motivation?**
+#### **What's the motivation?**
 
 The Qlik Data Concierge (QDC) has been developed to fulfill Enterprise IT demands, providing self-service live access to **SAP structures**, **Big Data systems**, **high-performance databases** and other **operative data sources** for business users.
 
@@ -52,7 +52,7 @@ The Qlik Data Concierge (QDC) has been developed to fulfill Enterprise IT demand
 ----------
 
 
-####**How does it work?**
+#### **How does it work?**
 
 The QDC is a 2 component solution. The **first component** of the solution is a Qlik Sense document (.qvf) which helps you to collect the metadata of your necessary system(s) (SAP, Hadoop  etc.).
 
@@ -78,7 +78,7 @@ The **second component** is a Webmashup. The Mashup enables the user to select t
 ----------
 
 
-####**Where do I find a documentation?**
+#### **Where do I find a documentation?**
 
 The documentation for Qlik Data Concierge will be maintained through the internal WIKI section of this repository.
 
@@ -89,7 +89,7 @@ The documentation for Qlik Data Concierge will be maintained through the interna
 
 
 
-####**Contribution**
+#### **Contribution**
 
  **I like to build my own Data-Acquisition-Wizard based on a different data source e.g. Hadoop etc.**
  
@@ -100,7 +100,7 @@ The documentation for Qlik Data Concierge will be maintained through the interna
 ----------
 
 
-####**Implementation**
+#### **Implementation**
  **I like to implement the solution in a production environment. Where can I get assistance from?**
  
  *Please contact Qlik Consulting Services to gain help in your project.*
